@@ -78,8 +78,8 @@ else {
     const R = 1.15;
     const loader = new THREE.TextureLoader();
     loader.setCrossOrigin("anonymous");
-    const DAY = "../vendor/d9qkr4-earth-blue-marble.jpg.js";
-    const NIGHT = "../vendor/f4fzo8-earth-night.jpg.js";
+    const DAY = "../vendor/d9qkr4-earth-blue-marble.jpg";
+    const NIGHT = "../vendor/f4fzo8-earth-night.jpg";
 
     const mat = new THREE.MeshPhongMaterial({ shininess: 12, specular: new THREE.Color(0x224466) });
     const earth = new THREE.Mesh(new THREE.SphereGeometry(R, 64, 64), mat);

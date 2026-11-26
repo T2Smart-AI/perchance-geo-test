@@ -10,9 +10,9 @@ Auto-generated structural notes (kind: generator, mode: engine).
 ### core
 - src/app.js (70021 B)
 ### data
-- src/data/anthems.json (5614 B)
 - src/data/countries.json (109766 B)
 - src/data/world.geo.json (256950 B)
+- src/data/anthems.json (5614 B)
 ### i18n
 - src/i18n.js (38076 B)
 ### render
