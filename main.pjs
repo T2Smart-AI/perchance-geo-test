@@ -1,0 +1,8 @@
+// Atlas interactif bilingue FR/EN — métadonnées
+$meta
+  title = Geo-Atlas — Interactive World Atlas · Atlas du monde interactif
+  description = Bilingual EN/FR giant interactive atlas-book: planisphere, 250 countries, thematic maps, versus, quiz, passport. 100% interactive & animated. / Atlas-livre géant bilingue : planisphère interactif, 250 pays, cartes thématiques, comparateur, quiz, passeport.
+  image = ./media/fr.png
+  tags = atlas, maps, geography, education, interactive, book, bilingual, anglais, francais
+  header
+    mode = minimal

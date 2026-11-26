@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Geo-Atlas — Interactive World Atlas · Atlas du monde interactif — présentation</title>
+<style>
+:root{--bg:#0a0f0e;--bg2:#132019;--acc:#f59e0b;--acc2:#2dd4bf;--txt:#f3ede0;--mut:#b3a98f;--card:rgba(245,158,11,.07);--brd:rgba(245,158,11,.35);--glow:0 10px 34px rgba(245,158,11,.30)}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(1200px 600px at 50% -10%,var(--bg2),var(--bg) 60%);color:var(--txt);font-family:'Segoe UI',system-ui,sans-serif;line-height:1.6}
+.scw-hero{background:linear-gradient(135deg,#111827 0%,#92400e 55%,#0f766e 115%);position:relative;overflow:hidden;padding:68px 20px 60px;text-align:center}
+.scw-hero::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(245,158,11,.12) 1px, transparent 1px);background-size:22px 22px;opacity:.6}
+.scw-hero::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 0%,rgba(10,8,4,.6) 100%);pointer-events:none}
+.scw-hero-in{position:relative;z-index:1;max-width:880px;margin:0 auto}
+.scw-logo{width:136px;height:136px;object-fit:cover;border-radius:28px;border:3px solid rgba(255,255,255,.75);box-shadow:var(--glow)}
+.scw-emoji{font-size:64px}
+.scw-hero h1{margin:16px 0 4px;font-family:'Trebuchet MS','Segoe UI',sans-serif;font-size:clamp(30px,5vw,54px);letter-spacing:.5px}
+.scw-tag{color:#fff;opacity:.93;font-size:clamp(15px,2.4vw,20px)}
+.scw-vibe{margin-top:6px;font-size:13px;letter-spacing:1px;text-transform:uppercase;opacity:.85;color:#fff}
+.scw-cat{display:inline-block;margin-top:10px;padding:4px 14px;border:1px solid rgba(255,255,255,.65);border-radius:999px;font-size:13px;background:rgba(0,0,0,.25)}
+.scw-stats{margin-top:10px;font-size:12.5px;opacity:.9;color:#fff}
+.scw-decor{margin-top:12px;font-size:13px;letter-spacing:3px;opacity:.8;color:#fff}
+.scw-cta-row{margin-top:22px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.scw-cta{display:inline-block;padding:12px 26px;border-radius:12px;color:#111;text-decoration:none;font-weight:800;background:#fff;background-image:linear-gradient(110deg,#fff7e0 20%,#f59e0b 50%,#2dd4bf 90%);box-shadow:var(--glow)}
+.scw-cta.ghost{background:rgba(0,0,0,.32);color:#fff;border:1px solid rgba(255,255,255,.6);box-shadow:none;animation:none}
+.scw-lang{position:absolute;top:12px;right:12px;z-index:2}.scw-lang button{background:rgba(0,0,0,.35);color:#fff;border:1px solid rgba(255,255,255,.5);border-radius:8px;padding:6px 12px;cursor:pointer;margin-left:6px}
+.scw-lang button.on{background:#fff;color:#111}
+.scw-eq{margin:14px auto 0;height:26px;width:max-content}.scw-eq span{height:26px;transform-origin:bottom}.scw-eq span:nth-child(1){animation-delay:0.2s}.scw-eq span:nth-child(2){animation-delay:0.5s}.scw-eq span:nth-child(3){animation-delay:0.9s}.scw-eq span:nth-child(4){animation-delay:0.4s}.scw-eq span:nth-child(5){animation-delay:0.7s}.scw-eq span:nth-child(6){animation-delay:0.3s}.scw-eq span:nth-child(7){animation-delay:0.8s}.scw-eq span:nth-child(8){animation-delay:0.55s}
+.scw-body{max-width:980px;margin:0 auto;padding:28px 18px 60px}
+.scw-body h2{margin-top:38px;border-bottom:2px solid var(--acc);padding-bottom:6px;font-family:'Trebuchet MS','Segoe UI',sans-serif}
+.scw-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:12px}
+.scw-card{background:var(--card);border:1px solid var(--brd);border-radius:12px;padding:12px 14px;backdrop-filter:blur(2px)}
+.scw-chip{display:inline-block;margin:4px 6px 0 0;padding:4px 12px;border-radius:999px;background:rgba(245,158,11,.14);border:1px solid var(--acc);font-size:13px}
+.scw-gal{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px}.scw-gal img{width:100%;border-radius:12px;border:1px solid var(--brd);box-shadow:var(--glow)}
+.scw-list li{margin:6px 0}code{background:rgba(0,0,0,.45);padding:2px 6px;border-radius:6px}
+.scw-run{background:rgba(0,0,0,.38);border:1px solid var(--brd);border-radius:12px;padding:14px 16px}.scw-run pre{background:#000;border-radius:8px;padding:10px;overflow:auto}
+.muted{color:var(--mut)}footer{text-align:center;padding:26px;color:var(--mut);font-size:13px}
+@media(max-width:560px){.scw-logo{width:104px;height:104px}.scw-hero{padding:52px 14px 44px}}
+@keyframes scwSlide{from{opacity:0;transform:translateX(-28px)}to{opacity:1;transform:none}}.scw-card{animation:scwSlide .6s ease both}
+.scw-logo{border-radius:18px!important}
+</style>
+</head>
+<body>
+<header class='scw-hero'><div class='scw-lang'><button id='scwFr' class='on'>FR</button><button id='scwEn'>EN</button></div><div class='scw-hero-in'>
+<img class='scw-logo' src='assets/logo.jpg' alt='logo'>
+<h1>Geo-Atlas — Interactive World Atlas · Atlas du monde interactif</h1>
+<div class='scw-tag' data-fr>Bilingual EN/FR giant interactive atlas-book: planisphere, 250 countries, thematic maps, versus, quiz, passport. 100% interactive &amp; animated. / Atlas-livre géant bilingue : planisphère interactif, 250 pays, cartes thématiques, comparateur, quiz, passeport.</div><div class='scw-tag' data-en hidden>Bilingual EN/FR giant interactive atlas-book: planisphere, 250 countries, thematic maps, versus, quiz, passport. 100% interactive &amp; animated. / Atlas-livre géant bilingue : planisphère interactif, 250 pays, cartes thématiques, comparateur, quiz, passeport.</div>
+<div class='scw-vibe'>forge naine — acier, runes et étincelles</div>
+<div><span class='scw-cat'>🛠️ Utilitaires / Utilities</span></div>
+<div class='scw-stats'>18 fichiers · 4067.4 KB · 1 listes · 30 actions</div>
+<div class='scw-decor' aria-hidden='true'>🔥 · Utilitaires · 🔥</div>
+<div class='scw-cta-row'><a class='scw-cta' href='./index.html' data-fr>🚀 Ouvrir l'application</a><a class='scw-cta' href='./index.html' data-en hidden>🚀 Open the app</a><a class='scw-cta ghost' href='https://github.com/T2Smart-AI/perchance-geo-test' target='_blank' rel='noopener'>GitHub</a><a class='scw-cta ghost' href='https://T2Smart-AI.github.io/perchance-geo-test/' target='_blank' rel='noopener'>Live demo</a></div>
+</div></header>
+<div class='scw-body'>
+<h2 data-fr>🖼️ Captures</h2><h2 data-en hidden>🖼️ Screenshots</h2><div data-fr><div class='scw-gal'><a href='assets/hero.jpg' target='_blank' rel='noopener'><img src='assets/hero.jpg' alt='capture 1' loading='lazy'></a><a href='screenshots/real-01-desktop.png' target='_blank' rel='noopener'><img src='screenshots/real-01-desktop.png' alt='capture 2' loading='lazy'></a><a href='screenshots/real-02-action.png' target='_blank' rel='noopener'><img src='screenshots/real-02-action.png' alt='capture 3' loading='lazy'></a><a href='screenshots/real-03-mobile.png' target='_blank' rel='noopener'><img src='screenshots/real-03-mobile.png' alt='capture 4' loading='lazy'></a></div></div><div data-en hidden><div class='scw-gal'><a href='assets/hero.jpg' target='_blank' rel='noopener'><img src='assets/hero.jpg' alt='capture 1' loading='lazy'></a><a href='screenshots/real-01-desktop.png' target='_blank' rel='noopener'><img src='screenshots/real-01-desktop.png' alt='capture 2' loading='lazy'></a><a href='screenshots/real-02-action.png' target='_blank' rel='noopener'><img src='screenshots/real-02-action.png' alt='capture 3' loading='lazy'></a><a href='screenshots/real-03-mobile.png' target='_blank' rel='noopener'><img src='screenshots/real-03-mobile.png' alt='capture 4' loading='lazy'></a></div></div>
+<h2 data-fr>✨ Fonctionnalités</h2><h2 data-en hidden>✨ Features</h2><div class='scw-grid' data-fr><div class='scw-card'>✨ 🎲</div><div class='scw-card'>✨ 🇬🇧 EN</div><div class='scw-card'>✨ 🔊</div><div class='scw-card'>✨ 🌙</div><div class='scw-card'>✨ 📖 Couverture</div><div class='scw-card'>✨ 🗺️ Planisphère</div><div class='scw-card'>✨ 🌐 Continents</div><div class='scw-card'>✨ 📊 Thématiques</div><div class='scw-card'>✨ 🏳️ Pays A–Z</div><div class='scw-card'>✨ ⚔️ Versus</div><div class='scw-card'>✨ Ouverture de l&#39;atlas…</div><div class='scw-card'>✨ GEO-ATLAS · livre de cartes géant</div></div><div class='scw-grid' data-en hidden><div class='scw-card'>✨ 🎲</div><div class='scw-card'>✨ 🇬🇧 EN</div><div class='scw-card'>✨ 🔊</div><div class='scw-card'>✨ 🌙</div><div class='scw-card'>✨ 📖 Couverture</div><div class='scw-card'>✨ 🗺️ Planisphère</div><div class='scw-card'>✨ 🌐 Continents</div><div class='scw-card'>✨ 📊 Thématiques</div><div class='scw-card'>✨ 🏳️ Pays A–Z</div><div class='scw-card'>✨ ⚔️ Versus</div><div class='scw-card'>✨ Ouverture de l&#39;atlas…</div><div class='scw-card'>✨ GEO-ATLAS · livre de cartes géant</div></div>
+<h2 data-fr>🎮 Contrôles</h2><h2 data-en hidden>🎮 Controls</h2><div class='scw-card' data-fr>Souris / tactile</div><div class='scw-card' data-en hidden>Mouse / touch</div>
+<h2 data-fr>🧰 Technologies</h2><h2 data-en hidden>🧰 Stack</h2><div><span class='scw-chip'>three.js 0.160.0</span><span class='scw-chip'>canvas 2D</span><span class='scw-chip'>Web Audio</span><span class='scw-chip'>i18n</span><span class='scw-chip'>GitHub Pages</span></div>
+<h2 data-fr>🔧 Personnalisation</h2><h2 data-en hidden>🔧 Customization</h2><div data-fr><p class='muted'>Modifiez les fichiers src/ puis republiez.</p></div><div data-en hidden><p class='muted'>Edit src/ then republish.</p></div>
+<h2 data-fr>💻 Lancer en local</h2><h2 data-en hidden>💻 Run locally</h2><div class='scw-run'><div data-fr><b>Windows :</b> double-cliquez <code>start.cmd</code>. <b>macOS/Linux :</b> <code>sh start.sh</code>. <b>Sans Node :</b> <code>python3 -m http.server 8000</code>.</div><div data-en hidden><b>Windows:</b> double-click <code>start.cmd</code>. <b>macOS/Linux:</b> <code>sh start.sh</code>. <b>No Node:</b> <code>python3 -m http.server 8000</code>.</div><pre>http://127.0.0.1:8000/   # HTTP requis (les modules ES ne démarrent pas en file://)</pre></div>
+</div>
+<footer>Geo-Atlas — Interactive World Atlas · Atlas du monde interactif · Utilitaires / Utilities · MIT · 4067.4 KB</footer>
+<script>document.getElementById('scwFr').onclick=function(){document.querySelectorAll('[data-fr]').forEach(function(e){e.hidden=false});document.querySelectorAll('[data-en]').forEach(function(e){e.hidden=true});document.getElementById('scwFr').className='on';document.getElementById('scwEn').className='';};document.getElementById('scwEn').onclick=function(){document.querySelectorAll('[data-en]').forEach(function(e){e.hidden=false});document.querySelectorAll('[data-fr]').forEach(function(e){e.hidden=true});document.getElementById('scwEn').className='on';document.getElementById('scwFr').className='';};</script>
+</body>
+</html>
